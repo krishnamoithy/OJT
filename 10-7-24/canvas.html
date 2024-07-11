@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANVAS</title>
+</head>
+<body>
+    <canvas id="mycanvas1" width="200" height="100" style="border:1px solid #000;">
+        THIS IS MY 1 CANVAS
+    </canvas>
+
+    <canvas id="mycanvas2" width="200" height="100" style="border:1px solid #0c1be6;">
+        THIS IS MY 2 CANVAS
+    </canvas>
+    
+    <script>
+        var c1 = document.getElementById('mycanvas1');
+        var ctx1 = c1.getContext("2d");
+        ctx1.moveTo(0, 0);
+        ctx1.lineTo(200, 100);
+        ctx1.stroke();
+
+        var c2 = document.getElementById('mycanvas2');
+        var ctx2 = c2.getContext("2d");
+        ctx2.moveTo(0, 0);
+        ctx2.lineTo(200, 100);
+        ctx2.stroke();
+    </script>
+</body>
+</html>
