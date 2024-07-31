@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Scroll Page</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    .container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .video-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 150px; /* Top and bottom 20px, left and right 150px */
+    }
+    video {
+      width: calc(35% - 10px); /* Subtracting left and right margins */
+      height: calc(100% - 40px);  /* Subtracting top and bottom margins */
+      object-fit: fill;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="video-container">
+      <video src="video.mp4" controls></video>
+    </div>
+    <div class="video-container">
+      <video src="video.mp4" controls></video>
+    </div>
+    <div class="video-container">
+      <video src="video.mp4" controls></video>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const containers = document.querySelectorAll('.video-container');
+      let currentIndex = 0;
+      let isScrolling = false;
+
+      function pauseAllVideos() {
+        document.querySelectorAll('video').forEach(video => {
+          video.pause();
+        });
+      }
+
+      function scrollToVideo(index) {
+        if (index < 0 || index >= containers.length) return;
+        currentIndex = index;
+        pauseAllVideos();
+        containers[index].querySelector('video').play();
+        containers[index].scrollIntoView({ behavior: 'smooth' });
+      }
+
+      function handleScroll(event) {
+        if (isScrolling) return;
+        isScrolling = true;
+
+        if (event.deltaY > 0) {
+          // Scrolling down
+          scrollToVideo(currentIndex + 1);
+        } else {
+          // Scrolling up
+          scrollToVideo(currentIndex - 1);
+        }
+
+        // Allow scrolling again after animation
+        setTimeout(() => {
+          isScrolling = false;
+        }, 800); // Duration matching scroll animation
+      }
+
+      // Set up event listeners for the 'ended' event on each video
+      document.querySelectorAll('video').forEach((video, index) => {
+        video.addEventListener('ended', () => {
+          if (index < containers.length - 1) {
+            scrollToVideo(index + 1);
+          }
+        });
+      });
+
+      window.addEventListener('keydown', (event) => {
+        switch (event.key) {
+          case 'ArrowDown':
+            scrollToVideo(currentIndex + 1);
+            break;
+          case 'ArrowUp':
+            scrollToVideo(currentIndex - 1);
+            break;
+        }
+      });
+
+      window.addEventListener('wheel', handleScroll);
+
+      // Initial play
+      containers[currentIndex].querySelector('video').play();
+    });
+  </script>
+</body>
+</html>
+  
