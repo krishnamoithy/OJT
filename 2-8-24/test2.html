@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Creative Studio landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Creative Studio | Free Bootstrap 4.3.x template</title>
+
+    <!-- font icons -->
+ <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+
+    <!-- Bootstrap + Creative Studio main styles -->
+	<link rel="stylesheet" href="assets/css/creative-studio.css">
+    <!-- <link href="styles.css" rel="stylesheet"> -->
+    <style>
+        .bdy2 {
+            width: 100%;
+            max-width: 1200px;
+            margin: 90px auto 0;
+            padding-top: 50px;
+            padding: 10px;
+            background-color: #ffffff00;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(22, 21, 21, 0.1);
+            color: black;
+          }
+      
+          .kri {
+            display: flex;
+            justify-content: center;
+          }
+      
+          .form {
+            width: 100%;
+          }
+      
+          /* Form container */
+          .trust-form {
+            max-width: 1200px; /* Maximum width of the form */
+            margin: 50px auto; /* Center the form horizontally */
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          }
+      
+          /* Grid layout for form groups */
+          .trust-form .fields {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two columns */
+            gap: 20px; /* Space between columns */
+          }
+      
+          /* Style for form groups */
+          .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+          }
+      
+          /* Style for full-width form groups */
+          .form-group.full-width {
+            grid-column: 1 / 3; /* Full-width for specific elements */
+          }
+      
+          /* Style for labels */
+          .form-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+          }
+      
+          /* Style for input and select elements */
+          .form-group input,
+          .form-group select {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.7);
+          }
+      
+          /* Specific style for 'Add Member' button */
+          #add-member-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+      
+          #add-member-btn:hover {
+            background-color: #45a049;
+          }
+      
+          /* Style for the 'Register' button */
+          button[type="submit"] {
+            width: 100%;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+      
+          button[type="submit"]:hover {
+            background-color: #0056b3;
+          }
+      
+          /* Responsive design */
+          @media (max-width: 768px) {
+            .trust-form .fields {
+              grid-template-columns: 1fr; /* One column for smaller screens */
+            }
+          }
+        </style>
+        
+        
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    
+    <!-- Page Navigation -->
+    <nav class="navba custom-navbar navbar-expand-lg navbar-dark" style="background-color:  #f7f7f7;" data-spy="affix"  >
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/imgs/logo.png" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="register.html">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary btn-sm ml-lg-3" href="components.html">Components</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Of Page Navigation -->
+
+    <!-- Page Header -->
+
+        <div class="kri">
+        <div class="bdy2">
+            <form class="trust-form">
+                <div class="fields">
+                  <div class="form-group">
+                    <label for="trust-name">Trust Name:</label>
+                    <input type="text" id="trust-name" name="trust-name" placeholder="Enter trust name" required>
+                  </div>
+          
+                  <div class="form-group">
+                    <label for="govt-id">Trust Govt Issued ID No:</label>
+                    <input type="text" id="govt-id" name="govt-id" placeholder="Enter govt ID number" required>
+                  </div>
+          
+                  <div class="form-group">
+                    <label for="trust-address">Trust Address:</label>
+                    <input type="text" id="trust-address" name="trust-address" placeholder="Enter address" required>
+                  </div>
+          
+                  <div class="form-group">
+                    <label for="trust-city">Trust City:</label>
+                    <input type="text" id="trust-city" name="trust-city" placeholder="Enter city" required>
+                  </div>
+          
+                  <div class="form-group">
+                    <label for="trust-district">Trust District:</label>
+                    <input type="text" id="trust-district" name="trust-district" placeholder="Enter district" required>
+                  </div>
+          
+                  <div class="form-group">
+                    <label for="trust-year">Trust Started Year:</label>
+                    <input type="number" id="trust-year" name="trust-year" placeholder="Enter starting year" required>
+                  </div>
+          
+                  <div class="form-group">
+                    <label for="donor-count">Trust Donor Count:</label>
+                    <input type="number" id="donor-count" name="donor-count" placeholder="Enter donor count" required>
+                  </div>
+          
+                  <div class="form-group">
+                    <label for="volunteer-count">Trust Volunteer Count:</label>
+                    <input type="number" id="volunteer-count" name="volunteer-count" placeholder="Enter volunteer count" required>
+                  </div>
+          
+                  <div class="form-group">
+                    <label for="total-members">Total Trust Members Count:</label>
+                    <input type="number" id="total-members" name="total-members" placeholder="Enter total members count" required>
+                  </div>
+          
+                  <div class="form-group full-width">
+                    <label for="trust-members">Trust Members</label>
+                    <div id="members-list">
+                      <div class="member-item">
+                        <input type="text" name="member-name[]" placeholder="Enter member name" required>
+                      </div>
+                    </div>
+                    <button type="button" id="add-member-btn">Add Member</button>
+                  </div>
+          
+                  <div class="form-group">
+                    <label for="trust-type">Type of Trust Service:</label>
+                    <select id="trust-type" name="trust-type" required>
+                      <option value="" disabled selected>Select option</option>
+                      <option value="finance">Finance</option>
+                      <option value="both">Both</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+          
+                  <div class="form-group">
+                    <label for="trust-email">Trust Email:</label>
+                    <input type="email" id="trust-email" name="trust-email" placeholder="Enter email" required>
+                  </div>
+          
+                  <div class="form-group">
+                    <label for="trust-password">Password:</label>
+                    <input type="password" id="trust-password" name="trust-password" placeholder="Enter password" required>
+                  </div>
+          
+                  <div class="form-group full-width">
+                    <button type="submit">Register</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+    </header>
+    <!-- End Of Page Header -->
+
+    
+
+    <script>
+        document.getElementById('add-member-btn').addEventListener('click', function() {
+          const membersList = document.getElementById('members-list');
+          const memberItem = document.createElement('div');
+          memberItem.className = 'member-item';
+          memberItem.innerHTML = '<input type="text" name="member-name[]" placeholder="Enter member name" required>';
+          membersList.appendChild(memberItem);
+        });
+      </script>
+      
+    <!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Creative Studio js -->
+    <script src="assets/js/creative-studio.js"></script>
+
+</body>
+</html>
